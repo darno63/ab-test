@@ -1,0 +1,20 @@
+h1 {
+  margin: auto;
+  text-align: center;
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#cta {
+  font-size: 3em;
+}
+
+.pictures {
+  display: flex;
+  justify-content: space-evenly;
+}

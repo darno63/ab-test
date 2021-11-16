@@ -1,0 +1,8 @@
+extra/
+node_modules/
+pictures/
+picture1.*
+picture2.*
+
+*.env
+.env

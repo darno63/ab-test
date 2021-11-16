@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: abtest_web
+    build:
+      context: ./app
+    volumes:
+      - ./app/public/images/variants:/app/public/images/variants
+    ports:
+      - 127.0.0.1:3001:3001
+    env_file: web.env
+    restart: unless-stopped
+    networks:
+      - abnetwork
+
+  db:
+    container_name: abtest_db
+    image: mysql
+    ports:
+      - 3306:3306
+    env_file:
+      - db.env
+    volumes:
+      - abtest-data:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - abnetwork
+
+volumes:
+  abtest-data:
+
+networks:
+  abnetwork:
+    driver: bridge

@@ -1,0 +1,22 @@
+extends layout.pug
+
+block scripts
+  script(src='https://code.jquery.com/jquery-3.6.0.slim.min.js' integrity='sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=' crossorigin='anonymous')
+  script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+
+block content
+  h1= message
+
+  script.
+    let abTest = !{JSON.stringify(abTest)};
+
+  div(class='picture')
+    if abTest.bucket == 0
+      img(src='/images/variants/picture1.jpg' height='350' onerror="this.onerror=null;this.src='/images/default1.jpg';")
+      p Bucket Zero.
+    else if abTest.bucket == 1
+      img(src='/images/variants/picture2.jpg' height='350' onerror="this.onerror=null;this.src='/images/default2.jpg';")
+      p Bucket One.
+    a#cta(href="/gallery") CLICK HERE!
+
+  script(src='./js/homepage.js')
