@@ -18,7 +18,7 @@ services:
     container_name: abtest_db
     image: mysql
     ports:
-      - 3306:3306
+      - 127.0.0.1:3306:3306
     env_file:
       - db.env
     volumes:

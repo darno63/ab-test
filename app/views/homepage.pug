@@ -12,10 +12,10 @@ block content
 
   div(class='picture')
     if abTest.bucket == 0
-      img(src='/images/variants/picture1.jpg' height='350' onerror="this.onerror=null;this.src='/images/default1.jpg';")
+      img(src= image1 height='350')
       p Bucket Zero.
     else if abTest.bucket == 1
-      img(src='/images/variants/picture2.jpg' height='350' onerror="this.onerror=null;this.src='/images/default2.jpg';")
+      img(src= image2 height='350')
       p Bucket One.
     a#cta(href="/gallery") CLICK HERE!
 

@@ -4,5 +4,6 @@ pictures/
 picture1.*
 picture2.*
 
+config.json
 *.env
 .env

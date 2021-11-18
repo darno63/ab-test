@@ -6,7 +6,7 @@ window.onload = function foo() {
 $('#cta').on('click', () => updateData());
 
 function createData() {
-	axios.post('/api/events', { value: 0 })
+	axios.put('/api/events', { value: 0 })
 		.catch( err => console.log(err));
 }
 

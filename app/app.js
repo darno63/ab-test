@@ -21,7 +21,7 @@ app.use(express.json());
 
 let options = {
   enabled: true,
-  name: 'dog-butt',
+  name: 'dog1-dog2',
   buckets: [
     { variant: 0, weight: 0.50 },
     { variant: 1, weight: 0.50 }

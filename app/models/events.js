@@ -13,13 +13,6 @@ const sequelize = new Sequelize({
   }
 });
 
-/*
-		uuid: {
-			type: DataTypes.UUID,
-			primaryKey: true
-		},
-    */
-
 sequelize.define(
 	'events',
 	{
